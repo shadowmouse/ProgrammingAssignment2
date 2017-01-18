@@ -4,7 +4,7 @@
 ## Description : Assignment 2 - Demonstrate Lexical Scoping via a Cached Matrix Custom Object
 ##               Object will manage access to matrix data, returning a cached object on unchanged matrix.
 
-## Two storage objects for the matrix and a caching mechanism
+## Set storage object for the matrix and a caching mechanism
 
 makeCacheMatrix <- function(matrix = matrix()) {
   matrixInverse <- NULL

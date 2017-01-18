@@ -33,6 +33,7 @@ makeCacheMatrix <- function(matrix = matrix()) {
 ## Inputs : x (makeCacheMatrix Object) - matrix to be inverted
 ##    ... - Additional Unspecified Arguments
 ## Outputs : inverse (matrix) - inverse of the specified matrix (cached or calculated)
+## Notes : Function Contains Print Outputs -- Triggered on returning cached input
 
 
 cacheSolve <- function(x, ...) {

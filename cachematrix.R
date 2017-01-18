@@ -12,13 +12,13 @@
 ##    getInverse() - Returns matrixInvers Value (including null)
 ##    setInverse(inverse) - sets stored matrix inverse
 
-makeCacheMatrix <- function(matrix = matrix()) {
+makeCacheMatrix <- function(mtrx = matrix()) {
   matrixInverse <- NULL
   set <- function (m) {
-    matrix <<- m
+    mtrx <<- m
     matrixInverse <<- NULL
   }
-  get <- function () { matrix }
+  get <- function () { mtrx }
   setInverse <- function (inverse) { matrixInverse <<- inverse }
   getInverse <- function() { matrixInverse }
   list(
@@ -42,8 +42,8 @@ cacheSolve <- function(x, ...) {
       print("Returning Cached Inverse")
       return(inverse)
     }
-    matrix <- x$get();
-    inverse <- solve(matrix);
+    mtrx <- x$get();
+    inverse <- solve(mtrx);
     x$setInverse(inverse)
     inverse
 }

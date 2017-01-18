@@ -5,6 +5,12 @@
 ##               Object will manage access to matrix data, returning a cached object on unchanged matrix.
 
 ## Set storage object for the matrix and a caching mechanism
+## Inputs : matrix (matrix) - Matrix Variable to be Inverted and Cached
+## Outputs : List - Contains
+##    set(m) - m (matrix) to update to nulling the cache in the process
+##    get() - Returns Current Matrix
+##    getInverse() - Returns matrixInvers Value (including null)
+##    setInverse(inverse) - sets stored matrix inverse
 
 makeCacheMatrix <- function(matrix = matrix()) {
   matrixInverse <- NULL
@@ -24,6 +30,10 @@ makeCacheMatrix <- function(matrix = matrix()) {
 }
 
 ## Solve a matrix, obtaining it's inverse. Returns a Cached Value if the inverse was already calculated
+## Inputs : x (makeCacheMatrix Object) - matrix to be inverted
+##    ... - Additional Unspecified Arguments
+## Outputs : inverse (matrix) - inverse of the specified matrix (cached or calculated)
+
 
 cacheSolve <- function(x, ...) {
     inverse <- x$getInverse()
